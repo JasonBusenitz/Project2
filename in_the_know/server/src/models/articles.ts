@@ -2,7 +2,6 @@ import {
     Model,
     type InferAttributes,
     type InferCreationAttributes,
-    type CreationOptional,
     DataTypes,
     type Sequelize,
     type ForeignKey,
@@ -14,7 +13,7 @@ export class Article extends Model<
     InferAttributes<Article>,
     InferCreationAttributes<Article>
 > {
-    declare id: CreationOptional<number>;
+    declare id: number;
     declare author: string;
     declare title: string;
     declare url: string;
